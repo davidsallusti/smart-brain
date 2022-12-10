@@ -64,7 +64,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://playful-yeot-810762.netlify.app/imageurl', {
+      fetch('https://smart-brain-zs9s.onrender.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -74,7 +74,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://playful-yeot-810762.netlify.app/image', {
+          fetch('https://smart-brain-zs9s.onrender.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
